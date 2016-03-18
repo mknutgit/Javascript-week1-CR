@@ -1,15 +1,15 @@
 var apiKey = require('./../.env').apiKey;
-var gitHub = require('./../js/github.js');
-var response;
+var getRepos = require('./../js/github.js').getRepos;
 
 $(document).ready(function() {
-  $('#repo').click(function(event) {
-    // event.preventDefault();
+  $('#repo').click(function() {
 
-    var user = $('#userName').val();
 
-    $('#userName').val('');
+    var username = $('#username').val();
 
-    gitHub.getRepos(response);
+    $('#username').val('');
+
+    getRepos(username);
+
   });
 });
