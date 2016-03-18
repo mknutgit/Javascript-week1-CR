@@ -11,15 +11,26 @@
 
 <body>
   <div class="container">
+    <div class="row">
+      <h1>Explore GitHub Repositories!</h1>
 
-    <h1>Explore GitHub Repositories!</h1>
+      <label for="username">Enter a GitHub username</label>
+      <input id="username" type="text">
 
-    <label for="username">Enter a GitHub username</label>
-    <input id="username" type="text">
+      <button class="btn-success" id="repo">Get Repo Details!</button>
+    </div>
 
-    <button class="btn-success" id="repo">Get Repo Details!</button>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="showuser"></div>
+      </div>
+    </div>
 
-    <div class="showRepo"></div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="showrepos"></div>
+      </div>
+    </div>
     
   </div>
 </body>
