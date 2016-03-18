@@ -1,4 +1,4 @@
-var simon = require('./../js/myjsfile.js');
+var apiKey = require('./../.env').apiKey;
 
 $(document).ready(function() {
 
