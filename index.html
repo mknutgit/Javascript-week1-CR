@@ -10,22 +10,25 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="jumbotron container-fluid">
     <div class="row">
       <h1>Explore GitHub Repositories!</h1>
 
       <label for="username">Enter a GitHub username</label>
       <input id="username" type="text">
 
-      <button class="btn-success" id="repo">Get Repo Details!</button>
+      <button class="btn btn-success" id="repo">Get Repo Details!</button>
+      <button type="reset" class="btn btn-success" onClick="window.location.reload()">Try Another Search!</button>
     </div>
+  </div>
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6">
         <div class="showUser"></div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-sm-6" id="repos">
+        <h4>Click the Repository Name to Review on GitHub:</h4>
         <div class="showRepos"></div>
       </div>
     </div>
