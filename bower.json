@@ -1,0 +1,20 @@
+{
+  "name": "simon",
+  "description": "========= # insertApplicationName HAL2000",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/mknutgit/JavaScript-Template",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+   "jquery": "^2.2.0",
+   "bootstrap": "^3.3.6",
+   "moment": "^2.11.2"
+ }
+}
