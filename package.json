@@ -1,8 +1,8 @@
 {
-  "name": "Code_Review",
+  "name": "code_review",
   "version": "1.0.0",
   "description": "========= # Code Review",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
