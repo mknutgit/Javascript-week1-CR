@@ -17,7 +17,9 @@ This week's code review is to create a website where the user can enter a GitHub
 ### Setup
 
 Clone this repo on to your desktop, make sure that you have node.js installed on your computer and then:
-* navigate into the project folder.
+* Navigate into the project folder.
+* Place your Github API key in between the quotes in the .env file and save
+
 * In your terminal, run the commands:
 ```shell
 npm install
@@ -25,7 +27,7 @@ bower install
 ```
 * Once they are finished installing successfully, enter the commands:
 ```shell
-gulp build --production
+gulp build
 gulp serve
 ```
 * Enjoy the website!
