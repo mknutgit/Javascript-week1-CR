@@ -1,37 +1,40 @@
-var apiKey = require('./../.env').apiKey;
+var apiKey = require('./../.env').apiKeyGithub;
 
-
-exports.getUser = function(username){
-
-  $.get('https://api.github.com/users/' + username + '?access_token=' + apiKey).then(function(user) {
-
-    $('.showUser').append('<h2>USER: ' + user.login + '</h2>');
-
-  })
-
-  .fail(function(error) {
-    alert("No user found, try again!");
-    console.log(error.responseJSON.message);
-  });
+// Take a user name (string) and passes it to callback (function)
+exports.getRepos = function(userName, callback) {
+  // Ajax request to get all repo information for userName
+  if (apiKey) {
+    $.get('https://api.github.com/users/' + userName + '/repos?access_token=' + apiKey + '&sort=created&per_page=100')
+    .then(function(response){
+      callback(response);
+    }).fail(function(error){
+      console.log(error.responseJSON.message);
+    });
+  } else {
+    $.get('https://api.github.com/users/' + userName + '/repos?sort=created&per_page=100')
+    .then(function(response){
+      callback(response);
+    }).fail(function(error){
+      console.log(error.responseJSON.message);
+    });
+  }
 };
 
-exports.getRepos = function(username){
-  $.get('https://api.github.com/users/' + username + '/repos?access_token=' + apiKey).then(function(repositories) {
-    console.log(repositories);
-
-    repositories.forEach(function(repo) {
-      $('.showRepos').append('<h2><a href=' + repo.html_url + '>' + repo.name + '</a></h2>');
-      $('.showRepos').append('<li> Created: ' + moment(repo.created_at).format('MMM Do YYYY') + '</li>');
-
-      if (repo.description === "") {
-        $('.showRepos').append('<li> No Description Available </li><br>');
-      } else {
-        $('.showRepos').append('<li>' + repo.description + '</li><br>');
-      }
+exports.getUser = function(userName, callback) {
+  // Ajax request to get all repo information for userName
+  if (apiKey) {
+    $.get('https://api.github.com/users/' + userName + '?access_token=' + apiKey)
+    .then(function(response){
+      callback(response);
+    }).fail(function(error){
+      console.log(error.responseJSON.message);
     });
-  })
-
-  .fail(function(error) {
-    console.log(error.responseJSON.message);
-  });
+  } else {
+    $.get('https://api.github.com/users/' + userName + '?')
+    .then(function(response){
+      callback(response);
+    }).fail(function(error){
+      console.log(error.responseJSON.message);
+    });
+  }
 };
