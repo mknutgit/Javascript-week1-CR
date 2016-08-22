@@ -85,7 +85,7 @@ Add the following to the end of the file: 127.0.0.1 workfrom.dev.
 
 Step 2. Create the Website Folder
 ```
-Open MAMP-Preferences-Web Server and take not of the document root path.
+Open MAMP-Preferences-Web Server and take note of the document root path.
 Navigate to that folder and add your website folder there - workfrom.dev.
 Example: mattknutson/desktop/workfrom.co/workfrom.dev.
 Important, the folder must be named to same as the name you used in step 1.
