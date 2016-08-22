@@ -77,18 +77,19 @@ These instructions were taken from the following article and adopted for Workfro
 http://blainsmith.com/articles/quick-and-dirty-local-domain-names-for-mamp ** 
 
 Step 1. Edit your hosts file
-
+```
 Open the hosts file in your text editor of choice. 
 Example: From your root directory in terminal enter "atom /etc/hosts".
 Add the following to the end of the file: 127.0.0.1 workfrom.dev.
+```
 
 Step 2. Create the Website Folder
-
+```
 Open MAMP-Preferences-Web Server and take not of the document root path.
 Navigate to that folder and add your website folder there - workfrom.dev.
 Example: mattknutson/desktop/workfrom.co/workfrom.dev.
 Important, the folder must be named to same as the name you used in step 1.
-
+```
 Step 3. Enable Virtual Hosts in Apache
 
 There is a specific file for Apache that handles virtual hosts:
