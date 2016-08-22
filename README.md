@@ -99,11 +99,12 @@ There is a specific file for Apache that handles virtual hosts:
 Add the following to that file changing ServerAdmin and DocumentRoot information to your own.
 
 <VirtualHost *:80>
+```
 		ServerAdmin matt@workfrom.co
 		DocumentRoot "/Users/mattknutson/Desktop/workfrom.co"
 		ServerName workfrom.dev
 		ServerAlias localhost
-
+```
 </VirtualHost>
 
 Step 4. Edit Main Apache httpd.conf file
