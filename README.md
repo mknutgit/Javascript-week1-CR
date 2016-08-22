@@ -96,7 +96,7 @@ There is a specific file for Apache that handles virtual hosts:
 
 /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 
-Add the following to that file changing *ServerAdmin* and *DocumentRoot* information to your own.
+Add the following to that file changing **ServerAdmin** and **DocumentRoot** information to your own.
 ```
 #<VirtualHost *:80>
 
